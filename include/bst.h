@@ -17,9 +17,9 @@ class BST {
             root->meaning = mean;
             root->count = 1;
             root->left = root->right = nullptr;
-        } else if (root->meaning < mean) { 
+        } else if (root->meaning < mean) {
             root->left = addN(root->left, mean);
-        } else if (root->meaning > mean) { 
+        } else if (root->meaning > mean) {
             root->right = addN(root->right, mean);
         } else {
             root->count++;
@@ -40,7 +40,7 @@ class BST {
     int depthTree(Node* root) {
         int Left = 0, Right = 0;
         if (root == nullptr) {
-            return 0; 
+            return 0;
         } else {
             Left = depthTree(root->left);
             Right = depthTree(root->right);
